@@ -1,0 +1,60 @@
+error - ClientError: the mutation(s) failed: Insufficient permissions; permission "create" required
+    at onResponse (/Volumes/Projects/dev/next-auth-test/node_modules/@sanity/client/lib/http/request.js:28:13)
+    at applyMiddleware (/Volumes/Projects/dev/next-auth-test/node_modules/get-it/lib-node/util/middlewareReducer.js:10:15)
+    at onResponse (/Volumes/Projects/dev/next-auth-test/node_modules/get-it/lib-node/index.js:80:22)
+    at /Volumes/Projects/dev/next-auth-test/node_modules/get-it/lib-node/index.js:50:55
+    at callback (/Volumes/Projects/dev/next-auth-test/node_modules/get-it/lib-node/request/node-request.js:67:46)
+    at /Volumes/Projects/dev/next-auth-test/node_modules/get-it/lib-node/request/node-request.js:156:14
+    at DestroyableTransform.<anonymous> (/Volumes/Projects/dev/next-auth-test/node_modules/simple-concat/index.js:8:13)
+    at Object.onceWrapper (node:events:641:28)
+    at DestroyableTransform.emit (node:events:539:35)
+    at endReadableNT (/Volumes/Projects/dev/next-auth-test/node_modules/readable-stream/lib/_stream_readable.js:1010:12) {
+  response: {
+    body: { error: [Object] },
+    url: 'https://lbyd1v1b.api.sanity.io/v2022-03-13/data/mutate/production?returnIds=true&returnDocuments=true&visibility=sync',
+    method: 'POST',
+    headers: {
+      'content-type': 'application/json; charset=utf-8',
+      'content-length': '297',
+      'x-ratelimit-remaining-second': '49',
+      'x-ratelimit-limit-second': '50',
+      'ratelimit-limit': '50',
+      'ratelimit-remaining': '49',
+      'ratelimit-reset': '1',
+      date: 'Mon, 12 Sep 2022 03:03:58 GMT',
+      'x-sanity-shard': 'gcp-eu-w1-01-prod-1036',
+      'x-served-by': 'gradient-web-7bf56bc447-4hvlx',
+      'strict-transport-security': 'max-age=15724800; includeSubDomains',
+      vary: 'origin',
+      xkey: 'project-lbyd1v1b, project-lbyd1v1b-production',
+      via: '1.1 google',
+      'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000',
+      connection: 'close'
+    },
+    statusCode: 403,
+    statusMessage: 'Forbidden'
+  },
+  statusCode: 403,
+  responseBody: '{\n' +
+    '  "error": {\n' +
+    '    "description": "the mutation(s) failed: Insufficient permissions; permission \\"create\\" required",\n' +
+    '    "items": [\n' +
+    '      {\n' +
+    '        "error": {\n' +
+    '          "description": "Insufficient permissions; permission \\"create\\" required",\n' +
+    '          "permission": "create",\n' +
+    '          "type": "insufficientPermissionsError"\n' +
+    '        },\n' +
+    '        "index": 0\n' +
+    '      }\n' +
+    '    ],\n' +
+    '    "type": "mutationError"\n' +
+    '  }\n' +
+    '}',
+  details: {
+    description: 'the mutation(s) failed: Insufficient permissions; permission "create" required',
+    items: [ [Object] ],
+    type: 'mutationError'
+  },
+  page: '/api/sanity/signUp'
+}

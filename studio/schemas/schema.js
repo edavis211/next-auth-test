@@ -11,6 +11,11 @@ import post from './post'
 import author from './author'
 import comment from './comment'
 
+// Sanity Auth Schema
+import user from './user'
+import account from './account'
+import verificationToken from './verificationToken'
+
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   // We name our schema
@@ -27,5 +32,8 @@ export default createSchema({
     // { type: 'typename' } in other document schemas
     blockContent,
     comment,
+    user,
+    account,
+    verificationToken,
   ]),
 })
